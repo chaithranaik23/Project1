@@ -4,12 +4,14 @@
     box-sizing: border-box;
 }
 body
-{
+{  
     align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: #f6f5f7;
+   background-color:lightgrey;
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'monserrat', sans-serif;
     min-height: 100%;
     margin: 5%;
@@ -57,19 +59,19 @@ form
     text-align: center;
 }
 h1
-{
-    font-weight: bold;
+{  
+    font-weight: bolder;
     margin: 0;
 }
 p
-{
+{   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: 600;
     line-height: 20px;
     letter-spacing: 0.5px;
     margin: 15px 0 20px;
 }
-input
+input,select
 {
     background: #eee;
     padding: 12px 15px;
@@ -95,8 +97,8 @@ button
     padding: 12px 55px;
     margin: 20px;
     border-radius: 20px;
-    border: 1px solid #ff4b2b;
     outline: none;
+    border: none;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
@@ -108,8 +110,10 @@ button:active
 }
 #signIn, #signUp
 {
-    background-color: transparent;
-    border: 2px solid #fff;
+    background: white;
+    border: 1px solid #ff4b2b;
+    color:#ff4b2b ;
+
 }
 .container.right-panel-active .sign-in
 {
@@ -140,14 +144,21 @@ button:active
 {
     position: relative;
     color: #fff;
-    background: #ff416c;
     left: -100%;
     height: 100%;
     width: 200%;
-    background: linear-gradient(to right,#ff4b38,#ff228c);
+    /* background: url('bg.jpg'); */
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url('bg.jpg');
+    /* background: linear-gradient(to right,#fa331d,#ff4b2b); */
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter:inherit;
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
 }
+
+
 .container.right-panel-active .overlay
 {
     transform: translateX(50%);
@@ -198,4 +209,7 @@ button:active
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 50%;
+}
+.overlay-body{
+
 }
